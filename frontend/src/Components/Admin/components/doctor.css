@@ -1,0 +1,16 @@
+.select{
+    background-color: var(--select-bg, #ffffff);
+    color: var(--select-color, #111827);
+}
+
+.select .dropdown-container,
+.select .dropdown-heading,
+.select .dropdown-content,
+.select .select-panel {
+    background-color: inherit;
+    color: inherit;
+}
+
+.select input {
+    color: inherit;
+}

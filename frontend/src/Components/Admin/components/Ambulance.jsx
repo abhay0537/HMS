@@ -12,7 +12,7 @@ export default function Enquery() {
   
     const fetchEnquery = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/ambulance', {
+        const response = await axios.get('https://hms-five-kappa.vercel.app/ambulance', {
           headers: {
             'Content-Type': 'application/json',
             authorization: localStorage.getItem('jwt'),

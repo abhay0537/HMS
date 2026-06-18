@@ -26,7 +26,7 @@ const Services = () => {
 
   const fetchServices = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/services", {
+      const response = await axios.get("https://hms-five-kappa.vercel.app/services", {
         headers: { authorization: token },
       });
       const rowsWithId = response.data.services.map((service, index) => ({
@@ -92,8 +92,8 @@ const Services = () => {
       const image = await uploadServiceImage();
       const payload = { ...formData, image };
       const url = isEditing
-        ? `http://localhost:8080/services/${selectedService._id}`
-        : "http://localhost:8080/services";
+        ? `https://hms-five-kappa.vercel.app/services/${selectedService._id}`
+        : "https://hms-five-kappa.vercel.app/services";
       await axios[isEditing ? "patch" : "post"](url, payload, {
         headers: { authorization: token },
       });
@@ -110,7 +110,7 @@ const Services = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:8080/services/${id}`, {
+      await axios.delete(`https://hms-five-kappa.vercel.app/services/${id}`, {
         headers: { authorization: token },
       });
       toast.success("Service deleted successfully");

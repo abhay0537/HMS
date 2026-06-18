@@ -14,7 +14,7 @@ export default function DataGridDemo() {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/public/doctor", {
+      const response = await axios.get("https://hms-five-kappa.vercel.app/public/doctor", {
         headers: {
           "Content-Type": "application/json",
           authorization: localStorage.getItem("jwt"),
@@ -38,7 +38,7 @@ export default function DataGridDemo() {
   const handleDelete = async (id) => {
     const token = localStorage.getItem("jwt");
     try {
-      await axios.delete(`http://localhost:8080/doctor/${id}`, {
+      await axios.delete(`https://hms-five-kappa.vercel.app/doctor/${id}`, {
         headers: {
           "Content-Type": "application/json",
           authorization: token,

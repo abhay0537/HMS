@@ -20,7 +20,7 @@ const AddDoctorForm = () => {
 
   const fetchdoctor = async () => {
     try {
-      const response = await axios.get('http://localhost:8080/doctor-single', {
+      const response = await axios.get('https://hms-five-kappa.vercel.app/doctor-single', {
         headers: { authorization: localStorage.getItem("jwt") }
       });
       if (response) setUser(response.data.data);
@@ -66,7 +66,7 @@ const AddDoctorForm = () => {
       setIsUploading(true);
       const image = await uploadImage();
       const doctorData = { name, image, contact, email, desc, ammount };
-      const response = await axios.patch('http://localhost:8080/doctor-update', doctorData, {
+      const response = await axios.patch('https://hms-five-kappa.vercel.app/doctor-update', doctorData, {
         headers: { authorization: localStorage.getItem("jwt") }
       });
       if (response) {

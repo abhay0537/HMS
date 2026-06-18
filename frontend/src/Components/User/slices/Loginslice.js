@@ -13,7 +13,7 @@ export const loginAsync = createAsyncThunk(
   'login/loginAsync',
   async (credentials, { rejectWithValue }) => {
     try {
-      const response = await axios.post("http://localhost:8080/signin", credentials);
+      const response = await axios.post("https://hms-five-kappa.vercel.app/signin", credentials);
       
       if (response.data.token !== undefined) {
         const expirationTime = new Date().getTime() + TOKEN_EXPIRATION_TIME;

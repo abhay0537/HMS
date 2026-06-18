@@ -37,7 +37,7 @@ export default function Cart() {
   const MakePayment = async (id) => {
     try {
       await axios.post(
-        "http://localhost:8080/patient/payment",
+        "https://hms-five-kappa.vercel.app/patient/payment",
         { status: "paid", _id: id },
         { headers: { authorization: tokens } }
       );

@@ -8,7 +8,7 @@ import { createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 
  export const getservice=createAsyncThunk("getService", async(_, { rejectWithValue })=>{
     try {
-    const res=await fetch("http://localhost:8080/public/service")
+    const res=await fetch("https://hms-five-kappa.vercel.app/public/service")
     if (!res.ok) {
         throw new Error("Unable to load services")
     }

@@ -24,7 +24,7 @@ const AmbulanceBooking = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8080/patient/ambulance', bookingInfo);
+      const response = await axios.post('https://hms-five-kappa.vercel.app/patient/ambulance', bookingInfo);
       if (response.status === 200) {
         toast.success(response.data.message);
         navigate("/");

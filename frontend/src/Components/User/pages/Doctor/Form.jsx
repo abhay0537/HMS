@@ -30,7 +30,7 @@ const AppointmentForm = () => {
 
   const doctorDetails = async (id) => {
     try {
-      const { data } = await axios.get(`http://localhost:8080/public/doctor/${id}`, {
+      const { data } = await axios.get(`https://hms-five-kappa.vercel.app/public/doctor/${id}`, {
         headers: { authorization: token },
       });
       setDoctor(data.data);
@@ -53,7 +53,7 @@ const AppointmentForm = () => {
     event.preventDefault();
     try {
       const res = await axios.post(
-        "http://localhost:8080/patient/appointment",
+        "https://hms-five-kappa.vercel.app/patient/appointment",
         appointmentData,
         {
           headers: {

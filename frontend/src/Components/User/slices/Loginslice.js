@@ -13,7 +13,7 @@ export const loginAsync = createAsyncThunk(
   'login/loginAsync',
   async (credentials, { rejectWithValue }) => {
     try {
-      const response = await axios.post("https://hms-0s4w.onrender.comsignin", credentials);
+      const response = await axios.post("https://hms-0s4w.onrender.com/signin", credentials);
       
       if (response.data.token !== undefined) {
         const expirationTime = new Date().getTime() + TOKEN_EXPIRATION_TIME;

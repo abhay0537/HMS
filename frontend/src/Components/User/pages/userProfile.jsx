@@ -33,7 +33,7 @@ const UserProfile = () => {
 
   const fetch_user = async () => {
     try {
-      const response = await axios.get('https://hms-five-kappa.vercel.app/userdetails', {
+      const response = await axios.get('https://hms-0s4w.onrender.comuserdetails', {
         headers: { authorization: localStorage.getItem('jwt') },
       });
       setUser(response?.data?.data);
@@ -79,7 +79,7 @@ const UserProfile = () => {
       setIsUploading(true);
       const image = await uploadImage();
       await axios.put(
-        'https://hms-five-kappa.vercel.app/updatepatient',
+        'https://hms-0s4w.onrender.comupdatepatient',
         {
           username: userName,
           email: userEmail,

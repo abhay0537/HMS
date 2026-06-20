@@ -12,7 +12,7 @@ export default function Enquery() {
   
     const fetchEnquery = async () => {
       try {
-        const response = await axios.get('https://hms-five-kappa.vercel.app/userquery', {
+        const response = await axios.get('https://hms-0s4w.onrender.comuserquery', {
           headers: {
             'Content-Type': 'application/json',
             authorization: localStorage.getItem('jwt'),

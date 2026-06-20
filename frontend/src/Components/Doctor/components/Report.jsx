@@ -16,7 +16,7 @@ function Report() {
 
   const fetchdata = async () => {
     try {
-      const response = await axios.get(`https://hms-five-kappa.vercel.app/single/${id}`, {
+      const response = await axios.get(`https://hms-0s4w.onrender.comsingle/${id}`, {
         headers: {
           'Content-Type': 'application/json',
           authorization: localStorage.getItem('jwt'),
@@ -35,7 +35,7 @@ function Report() {
   const handlesave = async () => {
     setIsEditingDate(!isEditingDate);
     try {
-      await axios.patch(`https://hms-five-kappa.vercel.app/update-date`, { _id: id, date: selectedDate }, {
+      await axios.patch(`https://hms-0s4w.onrender.comupdate-date`, { _id: id, date: selectedDate }, {
         headers: {
           'Content-Type': 'application/json',
           authorization: localStorage.getItem('jwt'),

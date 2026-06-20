@@ -15,7 +15,7 @@ const ContactUsPage = () => {
     e.preventDefault();
     setIsSending(true);
     try {
-      const response = await axios.post("https://hms-five-kappa.vercel.app/patient/patientmessage", {
+      const response = await axios.post("https://hms-0s4w.onrender.compatient/patientmessage", {
         name,
         email,
         message,

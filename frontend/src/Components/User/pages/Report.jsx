@@ -17,7 +17,7 @@ const Report = () => {
   const doctorDetails = async (id) => {
     try {
       const { data } = await axios.get(
-        `https://hms-five-kappa.vercel.app/patient/single-appointment/${id}`,
+        `https://hms-0s4w.onrender.compatient/single-appointment/${id}`,
         {
           headers: {
             authorization: token,

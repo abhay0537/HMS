@@ -12,7 +12,7 @@ function Report() {
 
  const fetchdata = async () => {
     try {
-      const response = await axios.get(`https://hms-five-kappa.vercel.app/single/${id}`, {
+      const response = await axios.get(`https://hms-0s4w.onrender.comsingle/${id}`, {
         headers: {
           'Content-Type': 'application/json',
           authorization: localStorage.getItem('jwt'),

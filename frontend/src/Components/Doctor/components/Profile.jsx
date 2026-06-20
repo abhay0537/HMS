@@ -7,7 +7,7 @@ const DoctorProfile = () => {
 
   const fetchDoctor = async () => {
     try {
-      const response = await axios.get('https://hms-five-kappa.vercel.app/doctor-single', {
+      const response = await axios.get('https://hms-0s4w.onrender.comdoctor-single', {
         headers: { authorization: localStorage.getItem('jwt') },
       });
       if (response) setDoctor(response.data.data);

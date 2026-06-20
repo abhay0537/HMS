@@ -17,7 +17,7 @@ function LoginForm() {
 
   const onSubmit = async (values) => {
     try {
-        const response= await axios.post ("https://hms-five-kappa.vercel.app/doctorsignin",values)
+        const response= await axios.post ("https://hms-0s4w.onrender.comdoctorsignin",values)
         
         if(response.status===200){
             localStorage.setItem("jwt",response.data.token)

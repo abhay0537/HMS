@@ -12,7 +12,7 @@ export default function Users() {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get('https://hms-five-kappa.vercel.app/appointments', {
+      const response = await axios.get('https://hms-0s4w.onrender.comappointments', {
         headers: {
           'Content-Type': 'application/json',
           authorization: localStorage.getItem('jwt'),
@@ -29,7 +29,7 @@ export default function Users() {
     try {
       // Save the appointment details
       const response = await axios.patch(
-        'https://hms-five-kappa.vercel.app/appointments',
+        'https://hms-0s4w.onrender.comappointments',
         {
           _id: appointment._id,
           status: 'checked',

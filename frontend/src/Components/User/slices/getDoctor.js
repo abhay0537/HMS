@@ -7,7 +7,7 @@ import { createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 }
 
  export const getdoctor=createAsyncThunk("getdoctor", async()=>{
-    const res=await fetch("https://hms-five-kappa.vercel.app/public/doctor")
+    const res=await fetch("https://hms-0s4w.onrender.compublic/doctor")
     const data=res.json()
     return data
 

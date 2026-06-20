@@ -101,8 +101,8 @@ const AddDoctorForm = ({ fetchdata, initialDoctor, onCancel }) => {
       const image = await uploadDoctorPhoto();
       const doctorData = { name, expertise, image,date,contact,email,password,desc,ammount };
       const url = isEditing
-        ? `https://hms-five-kappa.vercel.app/doctor/${initialDoctor._id}`
-        : 'https://hms-five-kappa.vercel.app/doctor';
+        ? `https://hms-0s4w.onrender.comdoctor/${initialDoctor._id}`
+        : 'https://hms-0s4w.onrender.comdoctor';
       const response = await axios[isEditing ? "patch" : "post"](url, doctorData,{
         headers: {
             

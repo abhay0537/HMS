@@ -9,7 +9,7 @@ import axios from "axios";
 }
 export const getpatient = createAsyncThunk('getacrt', async () => {
     try {
-      const response = await axios.get('https://hms-five-kappa.vercel.app/patient',{
+      const response = await axios.get('https://hms-0s4w.onrender.compatient',{
         headers: {
             
             "authorization": localStorage.getItem("jwt")

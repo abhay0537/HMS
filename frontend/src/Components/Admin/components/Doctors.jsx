@@ -14,7 +14,7 @@ export default function DataGridDemo() {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get("https://hms-0s4w.onrender.compublic/doctor", {
+      const response = await axios.get("https://hms-0s4w.onrender.com/public/doctor", {
         headers: {
           "Content-Type": "application/json",
           authorization: localStorage.getItem("jwt"),
@@ -38,7 +38,7 @@ export default function DataGridDemo() {
   const handleDelete = async (id) => {
     const token = localStorage.getItem("jwt");
     try {
-      await axios.delete(`https://hms-0s4w.onrender.comdoctor/${id}`, {
+      await axios.delete(`https://hms-0s4w.onrender.com/doctor/${id}`, {
         headers: {
           "Content-Type": "application/json",
           authorization: token,

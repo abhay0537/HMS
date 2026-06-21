@@ -26,7 +26,7 @@ const Services = () => {
 
   const fetchServices = async () => {
     try {
-      const response = await axios.get("https://hms-0s4w.onrender.comservices", {
+      const response = await axios.get("https://hms-0s4w.onrender.com/services", {
         headers: { authorization: token },
       });
       const rowsWithId = response.data.services.map((service, index) => ({
@@ -92,8 +92,8 @@ const Services = () => {
       const image = await uploadServiceImage();
       const payload = { ...formData, image };
       const url = isEditing
-        ? `https://hms-0s4w.onrender.comservices/${selectedService._id}`
-        : "https://hms-0s4w.onrender.comservices";
+        ? `https://hms-0s4w.onrender.com/services/${selectedService._id}`
+        : "https://hms-0s4w.onrender.com/services";
       await axios[isEditing ? "patch" : "post"](url, payload, {
         headers: { authorization: token },
       });
@@ -110,7 +110,7 @@ const Services = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`https://hms-0s4w.onrender.comservices/${id}`, {
+      await axios.delete(`https://hms-0s4w.onrender.com/services/${id}`, {
         headers: { authorization: token },
       });
       toast.success("Service deleted successfully");

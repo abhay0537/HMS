@@ -30,7 +30,7 @@ const AppointmentForm = () => {
 
   const doctorDetails = async (id) => {
     try {
-      const { data } = await axios.get(`https://hms-0s4w.onrender.compublic/doctor/${id}`, {
+      const { data } = await axios.get(`https://hms-0s4w.onrender.com/public/doctor/${id}`, {
         headers: { authorization: token },
       });
       setDoctor(data.data);
@@ -53,7 +53,7 @@ const AppointmentForm = () => {
     event.preventDefault();
     try {
       const res = await axios.post(
-        "https://hms-0s4w.onrender.compatient/appointment",
+        "https://hms-0s4w.onrender.com/patient/appointment",
         appointmentData,
         {
           headers: {

@@ -37,7 +37,7 @@ export default function Cart() {
   const MakePayment = async (id) => {
     try {
       await axios.post(
-        "https://hms-0s4w.onrender.compatient/payment",
+        "https://hms-0s4w.onrender.com/patient/payment",
         { status: "paid", _id: id },
         { headers: { authorization: tokens } }
       );

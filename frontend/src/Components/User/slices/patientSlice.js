@@ -1,7 +1,5 @@
 import { createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 import axios from "axios";
-
-
  const initialState={
     list:[],
     isLoading:false,
@@ -9,14 +7,11 @@ import axios from "axios";
 }
 export const getpatient = createAsyncThunk('getacrt', async () => {
     try {
-      const response = await axios.get('https://hms-0s4w.onrender.compatient',{
+      const response = await axios.get('https://hms-0s4w.onrender.com/patient',{
         headers: {
-            
             "authorization": localStorage.getItem("jwt")
-            
           },
       });
-    
       return response.data;
     } catch (error) {
       
@@ -37,11 +32,6 @@ export const getPatients=createSlice({
         [getpatient.rejected]:(state,action)=>{
             state.isLoading=false
             state.error=action.payload
-        }
-
-    }
-
+        }}
 })
-
-
 export default getPatients.reducer

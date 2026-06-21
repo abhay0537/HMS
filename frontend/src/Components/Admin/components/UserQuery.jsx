@@ -12,7 +12,7 @@ export default function Users() {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get('https://hms-0s4w.onrender.comappointments', {
+      const response = await axios.get('https://hms-0s4w.onrender.com/appointments', {
         headers: {
           'Content-Type': 'application/json',
           authorization: localStorage.getItem('jwt'),
@@ -29,7 +29,7 @@ export default function Users() {
     try {
       // Save the appointment details
       const response = await axios.patch(
-        'https://hms-0s4w.onrender.comappointments',
+        'https://hms-0s4w.onrender.com/appointments',
         {
           _id: appointment._id,
           status: 'checked',

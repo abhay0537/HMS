@@ -11,7 +11,7 @@ export default function Users() {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get('https://hms-0s4w.onrender.comdoctor-appointments', {
+      const response = await axios.get('https://hms-0s4w.onrender.com/doctor-appointments', {
         headers: {
           'Content-Type': 'application/json',
           authorization: localStorage.getItem('jwt'),

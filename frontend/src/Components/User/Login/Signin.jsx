@@ -46,7 +46,7 @@ function SignUpForm() {
   const onSubmit = async (values) => {
     try {
       const response = await axios.post(
-        "https://hms-0s4w.onrender.comsignup",
+        "https://hms-0s4w.onrender.com/signup",
 
         values
       );

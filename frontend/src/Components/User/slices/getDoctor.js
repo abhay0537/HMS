@@ -31,6 +31,4 @@ export const getDoctor=createSlice({
     }
 
 })
-
-
 export default getDoctor.reducer

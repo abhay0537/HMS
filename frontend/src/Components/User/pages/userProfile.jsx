@@ -33,7 +33,7 @@ const UserProfile = () => {
 
   const fetch_user = async () => {
     try {
-      const response = await axios.get('https://hms-0s4w.onrender.comuserdetails', {
+      const response = await axios.get('https://hms-0s4w.onrender.com/userdetails', {
         headers: { authorization: localStorage.getItem('jwt') },
       });
       setUser(response?.data?.data);
@@ -79,7 +79,7 @@ const UserProfile = () => {
       setIsUploading(true);
       const image = await uploadImage();
       await axios.put(
-        'https://hms-0s4w.onrender.comupdatepatient',
+        'https://hms-0s4w.onrender.com/updatepatient',
         {
           username: userName,
           email: userEmail,
